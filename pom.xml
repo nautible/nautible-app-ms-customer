@@ -9,22 +9,28 @@
   <properties>
     <compiler-plugin.version>3.8.1</compiler-plugin.version>
     <maven.compiler.parameters>true</maven.compiler.parameters>
-    <maven.compiler.source>11</maven.compiler.source>
-    <maven.compiler.target>11</maven.compiler.target>
-    <org.mapstruct.version>1.4.1.Final</org.mapstruct.version>
-    <swagger-annotations.version>1.6.2</swagger-annotations.version>
+    <maven.compiler.source>21</maven.compiler.source>
+    <maven.compiler.target>21</maven.compiler.target>
+    <org.mapstruct.version>1.6.3</org.mapstruct.version>
+    <swagger-annotations.version>1.6.15</swagger-annotations.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <quarkus-plugin.version>2.13.0.Final</quarkus-plugin.version>
+    <quarkus-plugin.version>3.21.4</quarkus-plugin.version>
     <quarkus.platform.artifact-id>quarkus-universe-bom</quarkus.platform.artifact-id>
     <quarkus.platform.group-id>io.quarkus</quarkus.platform.group-id>
-    <quarkus.platform.version>2.13.0.Final</quarkus.platform.version>
-    <surefire-plugin.version>3.0.0-M5</surefire-plugin.version>
-    <openapi.generator.maven.plugin.version>5.0.0</openapi.generator.maven.plugin.version>
+    <quarkus.platform.version>3.21.4</quarkus.platform.version>
+    <surefire-plugin.version>3.5.3</surefire-plugin.version>
+    <validation-api.version>2.0.1.Final</validation-api.version>
+    <javax.annotation-api.version>1.3.2</javax.annotation-api.version>
+    <javax.interceptor-api.version>1.2.2</javax.interceptor-api.version>
+    <javax.ws.rs-api.version>2.1.1</javax.ws.rs-api.version>
+    <cdi-api.version>2.0.SP1</cdi-api.version>
+    <maven.compiler.release>21</maven.compiler.release>
+    <openapi.generator.maven.plugin.version>7.13.0</openapi.generator.maven.plugin.version>
     <nautible.app.customer.groupId>jp.co.ogis-ri.nautible.app</nautible.app.customer.groupId>
     <nautible.app.customer.name>nautible-app-ms-customer</nautible.app.customer.name>
     <nautible.app.customer.version>1.0.0-SNAPSHOT</nautible.app.customer.version>
-    <jandex.maven.plugin.version>1.1.0</jandex.maven.plugin.version>
+    <jandex.maven.plugin.version>1.2.3</jandex.maven.plugin.version>
   </properties>
   <dependencyManagement>
     <dependencies>
@@ -52,6 +58,31 @@
         <groupId>io.swagger</groupId>
         <artifactId>swagger-annotations</artifactId>
         <version>${swagger-annotations.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>javax.validation</groupId>
+        <artifactId>validation-api</artifactId>
+        <version>${validation-api.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>javax.annotation</groupId>
+        <artifactId>javax.annotation-api</artifactId>
+        <version>${javax.annotation-api.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>javax.interceptor</groupId>
+        <artifactId>javax.interceptor-api</artifactId>
+        <version>${javax.interceptor-api.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>javax.ws.rs</groupId>
+        <artifactId>javax.ws.rs-api</artifactId>
+        <version>${javax.ws.rs-api.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>javax.enterprise</groupId>
+        <artifactId>cdi-api</artifactId>
+        <version>${cdi-api.version}</version>
       </dependency>
       <dependency>
         <groupId>${nautible.app.customer.groupId}</groupId>
