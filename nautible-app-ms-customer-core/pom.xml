@@ -222,7 +222,7 @@
                     <invokerPackage>jp.co.ogis_ri.nautible.app.customer.api.rest</invokerPackage>
                     <apiPackage>jp.co.ogis_ri.nautible.app.customer.api.rest</apiPackage>
                     <modelPackage>jp.co.ogis_ri.nautible.app.customer.api.rest</modelPackage>
-                    <dateLibrary>java21</dateLibrary>
+                    <dateLibrary>java8</dateLibrary>
                     <generateSupportingFiles>false</generateSupportingFiles>
                     <generateBuilders>false</generateBuilders>
                     <generatePom>false</generatePom>
