@@ -3,12 +3,13 @@ package jp.co.ogis_ri.nautible.app.customer.inbound.rest;
 import java.util.List;
 import java.util.logging.Logger;
 
-import javax.inject.Inject;
-import javax.validation.Valid;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.QueryParam;
-import javax.ws.rs.core.Response;
-import javax.ws.rs.core.Response.Status;
+import jakarta.inject.Inject;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
+import jakarta.ws.rs.PathParam;
+import jakarta.ws.rs.QueryParam;
+import jakarta.ws.rs.core.Response;
+import jakarta.ws.rs.core.Response.Status;
 
 import jp.co.ogis_ri.nautible.app.customer.api.rest.RestCreateCustomerRequest;
 import jp.co.ogis_ri.nautible.app.customer.api.rest.RestCustomerService;
@@ -46,14 +47,14 @@ public class RestCustomerServiceImpl implements RestCustomerService {
     }
 
     @Override
-    public Response create(@Valid RestCreateCustomerRequest customer) {
+    public Response create(@Valid @NotNull RestCreateCustomerRequest customer) {
         Customer customerRet = service.create(mapper.restCreateCustomerRequestToCustomer(customer));
         return customerRet == null ? Response.status(Status.NOT_FOUND).build()
                 : Response.ok(mapper.customerToRestCreateCustomerResponse(customerRet)).build();
     }
 
     @Override
-    public Response update(@Valid RestUpdateCustomerRequest customer) {
+    public Response update(@Valid @NotNull RestUpdateCustomerRequest customer) {
         Customer customerRet = service.update(mapper.restUpdateCustomerRequestToCustomer(customer));
         return customerRet == null ? Response.status(Status.NOT_FOUND).build()
                 : Response.ok(mapper.customerToRestUpdateCustomerResponse(customerRet)).build();

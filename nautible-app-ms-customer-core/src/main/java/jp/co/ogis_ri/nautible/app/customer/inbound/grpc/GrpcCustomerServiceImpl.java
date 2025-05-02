@@ -3,8 +3,8 @@ package jp.co.ogis_ri.nautible.app.customer.inbound.grpc;
 import java.util.List;
 import java.util.logging.Logger;
 
-import javax.inject.Inject;
-import javax.inject.Singleton;
+import jakarta.inject.Inject;
+import jakarta.inject.Singleton;
 
 //import org.eclipse.microprofile.opentracing.Traced;
 
