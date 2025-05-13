@@ -22,12 +22,12 @@
             <valid/>
         </field>
         <getter name="name">
-            <constraint annotation="javax.validation.constraints.NotEmpty"/>
+            <constraint annotation="jakarta.validation.constraints.NotEmpty"/>
         </getter>
     </bean>
     <bean class="jp.co.ogis_ri.nautible.app.customer.api.grpc.GrpcAddress" ignore-annotations="true">
         <getter name="zipCode">
-            <constraint annotation="javax.validation.constraints.Pattern">
+            <constraint annotation="jakarta.validation.constraints.Pattern">
                 <element name="regexp">[0-9]{3}-[0-9]{4}</element>
             </constraint>
         </getter>

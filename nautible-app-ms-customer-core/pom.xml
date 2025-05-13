@@ -18,7 +18,7 @@
     <!-- rest -->
     <dependency>
       <groupId>io.quarkus</groupId>
-      <artifactId>quarkus-resteasy</artifactId>
+      <artifactId>quarkus-rest</artifactId>
     </dependency>
     <dependency>
       <groupId>io.quarkus</groupId>
@@ -42,7 +42,7 @@
     <!-- json -->
     <dependency>
       <groupId>io.quarkus</groupId>
-      <artifactId>quarkus-resteasy-jsonb</artifactId>
+      <artifactId>quarkus-rest-jsonb</artifactId>
     </dependency>
     <!-- openapi -->
     <dependency>
@@ -95,7 +95,31 @@
       <groupId>com.google.code.gson</groupId>
       <artifactId>gson</artifactId>
     </dependency>
-
+    <!-- https://mvnrepository.com/artifact/jakarta.validation/jakarta.validation-api -->
+    <dependency>
+        <groupId>jakarta.validation</groupId>
+        <artifactId>jakarta.validation-api</artifactId>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/jakarta.annotation/jakarta.annotation-api -->
+    <dependency>
+        <groupId>jakarta.annotation</groupId>
+        <artifactId>jakarta.annotation-api</artifactId>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/jakarta.interceptor/jakarta.interceptor-api -->
+    <dependency>
+        <groupId>jakarta.interceptor</groupId>
+        <artifactId>jakarta.interceptor-api</artifactId>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/jakarta.ws.rs/jakarta.ws.rs-api -->
+    <dependency>
+      <groupId>jakarta.ws.rs</groupId>
+      <artifactId>jakarta.ws.rs-api</artifactId>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/jakarta.enterprise/jakarta.enterprise.cdi-api -->
+    <dependency>
+      <groupId>jakarta.enterprise</groupId>
+      <artifactId>jakarta.enterprise.cdi-api</artifactId>
+    </dependency>
   </dependencies>
 
   <profiles>
@@ -204,7 +228,7 @@
                     <generatePom>false</generatePom>
                     <hideGenerationTimestamp>true</hideGenerationTimestamp>
                     <interfaceOnly>true</interfaceOnly>
-                    <java8>true</java8>
+                    <useJakartaEe>true</useJakartaEe>
                     <!-- if set quarkus, gen application.properties with mp.openapi.scan.disable=true, -->
                     <!-- and gen Dockerfile.jvm, Dockerfile.native -->
                     <!-- library>quarkus</library -->

@@ -2,10 +2,10 @@ package jp.co.ogis_ri.nautible.app.customer.core.rest;
 
 import java.util.Optional;
 
-import javax.enterprise.inject.spi.CDI;
-import javax.interceptor.AroundInvoke;
-import javax.interceptor.Interceptor;
-import javax.interceptor.InvocationContext;
+import jakarta.enterprise.inject.spi.CDI;
+import jakarta.interceptor.AroundInvoke;
+import jakarta.interceptor.Interceptor;
+import jakarta.interceptor.InvocationContext;
 
 import org.jboss.logging.MDC;
 
