@@ -191,8 +191,8 @@ jobs:
             exit 0
           fi
           git fetch origin "$BRANCH" && git checkout "$BRANCH"
-          sed -i 's/image: public.ecr.aws\/nautible\/nautible-app-ms-'"$APP_NAME"':\(.*\)/image: public.ecr.aws\/nautible\/nautible-app-ms-'"$APP_NAME"':'"$IMAGE_TAG"'/' ./overlays/aws/dev/"$APP_NAME"-deployment.yaml 
-          sed -i 's/image: '"$ACR_REGISTRY"'\/nautible-app-ms-'"$APP_NAME"':\(.*\)/image: '"$ACR_REGISTRY"'\/nautible-app-ms-'"$APP_NAME"':'"$IMAGE_TAG"'/' ./overlays/azure/dev/"$APP_NAME"-deployment.yaml 
+          sed -i 's/image: public.ecr.aws\/nautible\/nautible-app-ms-'"$APP_NAME"':\(.*\)/image: public.ecr.aws\/nautible\/nautible-app-ms-'"$APP_NAME"':'"$IMAGE_TAG"'/' ./overlays/aws/dev/"$APP_NAME"-deploy.yaml 
+          sed -i 's/image: '"$ACR_REGISTRY"'\/nautible-app-ms-'"$APP_NAME"':\(.*\)/image: '"$ACR_REGISTRY"'\/nautible-app-ms-'"$APP_NAME"':'"$IMAGE_TAG"'/' ./overlays/azure/dev/"$APP_NAME"-deploy.yaml 
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
