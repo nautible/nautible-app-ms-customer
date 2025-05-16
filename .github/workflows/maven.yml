@@ -166,6 +166,7 @@ jobs:
           app-id: ${{ secrets.APP_ID }}
           private-key: ${{ secrets.APP_PRIVATE_KEY }}
           permission-contents: write
+          permission-pull-requests: write
           repositories: |
             nautible-app-ms-customer
             nautible-app-ms-customer-manifest
