@@ -46,6 +46,7 @@ jobs:
     environment: develop # for azure oidc
 
     permissions:
+      id-token: write
       contents: read
 
     env:
